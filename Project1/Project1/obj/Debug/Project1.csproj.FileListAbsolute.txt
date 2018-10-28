@@ -17,3 +17,23 @@ C:\Users\User\Desktop\Project1\Project1\obj\Debug\Project1.frmHoaDon.resources
 C:\Users\User\Desktop\Project1\Project1\obj\Debug\Project1.frmKho.resources
 C:\Users\User\Desktop\Project1\Project1\obj\Debug\Project1.frmBanHang.resources
 C:\Users\User\Desktop\Project1\Project1\obj\Debug\Project1.frmGioHang.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\bin\Debug\Project1.exe.config
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\bin\Debug\Project1.exe
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\bin\Debug\Project1.pdb
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.Form1.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmBanHang.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmDoiPass.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmGioHang.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmHoaDon.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmKhachHang.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmKho.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmNCC.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmNhanVien.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmSanPham.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.frmShipper.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.Properties.Resources.resources
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.exe
+C:\Users\User\Desktop\Đồ Án\-n-1\Project1\Project1\obj\Debug\Project1.pdb

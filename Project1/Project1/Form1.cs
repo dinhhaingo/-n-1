@@ -26,56 +26,39 @@ namespace Project1
         }
         private void LoadTenShop()
         {
-            //InitializeTimer();
-            tenshop = me.TenShopget().Trim();
-            lblChao.Text = " Chào mừng đến với " + tenshop + " ";
-            timer1.Start();
-            //lblChao.Location = new Point(Width, lblChao.Location.Y);         
+            timer1.Start();        
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        string tk;
+        string mk;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataTable log = me.Login(txtUser.Text, txtPass.Text);
             try
             {
-                lblUser.Text = log.Rows[0][1].ToString().Trim();               
+                tk = log.Rows[0][0].ToString().Trim();
+                mk = log.Rows[0][5].ToString().Trim();
+                lblUser.Text = log.Rows[0][3].ToString().Trim()+": "+log.Rows[0][2].ToString().Trim();               
                 MessageBox.Show("Đăng nhập thành công", "Login",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                me.LoginSuccess(txtUser.Text);
+                //me.LoginSuccess(txtUser.Text);
+                tenshop = me.TenShopget(txtUser.Text).Trim();
+                lblChao.Text = " Chào mừng đến với " + tenshop + " ";
                 timer2.Start();
-                //tabControl1.Enabled = true;
                 btnShipper.Enabled = true;
                 btnNhanVien.Enabled = true;
                 btnKhachHang.Enabled = true;
                 btnSanPham.Enabled = true;
-                //btnSuaTT.Enabled = true;
-                //btnThongKe.Enabled = true;
                 btnThongTin.Enabled = true;
-                //btnKho.Enabled = true;
-                //btnBanHang.Enabled = true;
-                //btnBanHang.Enabled = true;
                 btnLogout.Enabled = true;
                 btnDoiPass.Enabled = true;
                 btnKho1.Enabled = true;
                 btnNCC.Enabled = true;
                 btnBanHang.Enabled = true;
                 btnHoaDon.Enabled = true;
-                //9
-                //if (log.Rows[0][1].ToString().Trim() != "admin")
-                //{
-                //    //
-                //    tabControl1.TabPages.Remove(QlyRapTab); // thêm tab nếu là admin
-                //    tabControl1.TabPages.Remove(TTRap);
-                //}
-                //else
-                //{
-                //    tabControl1.TabPages.Add(QlyRapTab); // thêm tab nếu là admin
-                //    tabControl1.TabPages.Add(TTRap);
-                //}
                 tabControl1.Visible = true;
                 lblChao.Visible = true;
                 lblUser.Visible = true;
@@ -92,20 +75,16 @@ namespace Project1
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            btnDoiPass.Enabled = false;
             btnLogout.Visible = false;
             btnShipper.Enabled = false;
             btnNhanVien.Enabled = false;
             btnKhachHang.Enabled = false;
             btnSanPham.Enabled = false;
-            //btnSuaTT.Enabled = false;
-            //btnThongKe.Enabled = false;
             btnThongTin.Enabled = false;
             btnBanHang.Enabled = false;
             btnHoaDon.Enabled = false;
-            //tabControl1.Visible = false;
-            //lblChao.Visible = false;
             lblUser.Visible = false;
-            //lblLogout.Visible = false;
             tabControl2.TabPages.Clear();
             tabControl2.TabPages.Add(pageLogin);
             tabControl2.TabPages.Add(pageHelp);
@@ -135,22 +114,18 @@ namespace Project1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadTenShop();
             btnNhanVien.Enabled = false;
             btnKhachHang.Enabled = false;
             btnSanPham.Enabled = false;
             btnShipper.Enabled = false;
             btnKho1.Enabled = false;
-            //btnThongKe.Enabled = false;
             btnThongTin.Enabled = false;
             btnDoiPass.Enabled = false;
             btnKho1.Enabled = false;
             btnNCC.Enabled = false;
             btnHoaDon.Enabled = false;
             btnBanHang.Enabled = false;
-            
-            //btnXemLich.Enabled = false;
-            //btnDatVe.Enabled = false;
-            //lblUser.Visible = false;
             btnLogout.Visible = false;
         }
 
@@ -247,6 +222,69 @@ namespace Project1
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void btnDoiPass_Click(object sender, EventArgs e)
+        {
+            frmDoiPass frm = new frmDoiPass();
+            frm.Message = tk;
+            frm.Message1 = mk;
+            frm.TopLevel = false;
+            string title = "Đổi Mật Khẩu";
+            TabPage pageDoiPass = new TabPage(title);
+            tabControl2.TabPages.Add(pageDoiPass);
+            pageDoiPass.Controls.Add(frm);
+            tabControl2.SelectedTab = pageDoiPass;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
         
+
+        private void btnThay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblThay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHai_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/nikolai.nhaizepxop");
+        }
+
+        private void lblHai_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/nikolai.nhaizepxop");
+        }
+
+        private void btnNhien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNhien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTruong_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://hcmute.edu.vn/");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = "Clock\n" + System.DateTime.Now.ToString();
+        }
+        int i = -2;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            lblUser.Left += i;
+            if (lblUser.Location.X <= 0 - lblUser.Width + 20)
+                lblUser.Location = new Point(Width, lblUser.Location.Y);
+        }
     }
 }

@@ -22,7 +22,8 @@ namespace Project1
                          p.TenSP,
                          p.LoaiSP,
                          p1.TenNCC,
-                         p.Gia
+                         p.Gia,
+                         p.Photo
                      };
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("MaSP"));
@@ -30,9 +31,10 @@ namespace Project1
             dt.Columns.Add(new DataColumn("LoaiSP"));
             dt.Columns.Add(new DataColumn("NCC"));
             dt.Columns.Add(new DataColumn("Gia"));
+            dt.Columns.Add(new DataColumn("Photo"));
             foreach (var s in sp.ToList())
             {
-                dt.LoadDataRow(new object[] { s.MaSP, s.TenSP, s.LoaiSP, s.TenNCC, s.Gia }, true);
+                dt.LoadDataRow(new object[] { s.MaSP, s.TenSP, s.LoaiSP, s.TenNCC, s.Gia,s.Photo }, true);
             }
             return dt;
 
@@ -80,7 +82,6 @@ namespace Project1
             dt.Columns.Add(new DataColumn("MaSP"));
             dt.Columns.Add(new DataColumn("MaCH"));
             dt.Columns.Add(new DataColumn("Size"));
-
             dt.Columns.Add(new DataColumn("SoLuong"));
             foreach (var s in sp.ToList())
             {

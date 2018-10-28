@@ -34,23 +34,24 @@
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.btnPhoto = new System.Windows.Forms.Button();
             this.gbSanPham = new System.Windows.Forms.GroupBox();
-            this.lblTenSP = new System.Windows.Forms.Label();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
-            this.lblLoaiSP = new System.Windows.Forms.Label();
-            this.lblNCC = new System.Windows.Forms.Label();
-            this.txtLoaiSP = new System.Windows.Forms.TextBox();
-            this.txtNCC = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNCC = new System.Windows.Forms.TextBox();
+            this.txtLoaiSP = new System.Windows.Forms.TextBox();
+            this.lblNCC = new System.Windows.Forms.Label();
+            this.lblLoaiSP = new System.Windows.Forms.Label();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.lblTenSP = new System.Windows.Forms.Label();
+            this.btnThem = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Photo = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.gbSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -113,6 +114,7 @@
             this.btnPhoto.TabIndex = 53;
             this.btnPhoto.Text = "Photo";
             this.btnPhoto.UseVisualStyleBackColor = false;
+            this.btnPhoto.Click += new System.EventHandler(this.btnPhoto_Click);
             // 
             // gbSanPham
             // 
@@ -137,40 +139,32 @@
             this.gbSanPham.TabStop = false;
             this.gbSanPham.Text = "Sản Phẩm";
             // 
-            // lblTenSP
+            // txtGia
             // 
-            this.lblTenSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTenSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.ForeColor = System.Drawing.Color.Blue;
-            this.lblTenSP.Location = new System.Drawing.Point(210, 22);
-            this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(80, 22);
-            this.lblTenSP.TabIndex = 31;
-            this.lblTenSP.Text = "Tên SP";
-            this.lblTenSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGia.ForeColor = System.Drawing.Color.Black;
+            this.txtGia.Location = new System.Drawing.Point(85, 87);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(105, 22);
+            this.txtGia.TabIndex = 52;
             // 
-            // txtTenSP
+            // txtNCC
             // 
-            this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSP.ForeColor = System.Drawing.Color.Black;
-            this.txtTenSP.Location = new System.Drawing.Point(296, 22);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(167, 22);
-            this.txtTenSP.TabIndex = 43;
+            this.txtNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNCC.ForeColor = System.Drawing.Color.Black;
+            this.txtNCC.Location = new System.Drawing.Point(296, 55);
+            this.txtNCC.Name = "txtNCC";
+            this.txtNCC.Size = new System.Drawing.Size(167, 22);
+            this.txtNCC.TabIndex = 39;
             // 
-            // lblLoaiSP
+            // txtLoaiSP
             // 
-            this.lblLoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblLoaiSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLoaiSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoaiSP.ForeColor = System.Drawing.Color.Blue;
-            this.lblLoaiSP.Location = new System.Drawing.Point(6, 55);
-            this.lblLoaiSP.Name = "lblLoaiSP";
-            this.lblLoaiSP.Size = new System.Drawing.Size(73, 22);
-            this.lblLoaiSP.TabIndex = 33;
-            this.lblLoaiSP.Text = "Loại SP";
-            this.lblLoaiSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoaiSP.ForeColor = System.Drawing.Color.Black;
+            this.txtLoaiSP.Location = new System.Drawing.Point(85, 55);
+            this.txtLoaiSP.Name = "txtLoaiSP";
+            this.txtLoaiSP.Size = new System.Drawing.Size(105, 22);
+            this.txtLoaiSP.TabIndex = 41;
             // 
             // lblNCC
             // 
@@ -185,23 +179,40 @@
             this.lblNCC.Text = "NCC";
             this.lblNCC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtLoaiSP
+            // lblLoaiSP
             // 
-            this.txtLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiSP.ForeColor = System.Drawing.Color.Black;
-            this.txtLoaiSP.Location = new System.Drawing.Point(85, 55);
-            this.txtLoaiSP.Name = "txtLoaiSP";
-            this.txtLoaiSP.Size = new System.Drawing.Size(105, 22);
-            this.txtLoaiSP.TabIndex = 41;
+            this.lblLoaiSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblLoaiSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLoaiSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoaiSP.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoaiSP.Location = new System.Drawing.Point(6, 55);
+            this.lblLoaiSP.Name = "lblLoaiSP";
+            this.lblLoaiSP.Size = new System.Drawing.Size(73, 22);
+            this.lblLoaiSP.TabIndex = 33;
+            this.lblLoaiSP.Text = "Loại SP";
+            this.lblLoaiSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtNCC
+            // txtTenSP
             // 
-            this.txtNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNCC.ForeColor = System.Drawing.Color.Black;
-            this.txtNCC.Location = new System.Drawing.Point(296, 55);
-            this.txtNCC.Name = "txtNCC";
-            this.txtNCC.Size = new System.Drawing.Size(167, 22);
-            this.txtNCC.TabIndex = 39;
+            this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSP.ForeColor = System.Drawing.Color.Black;
+            this.txtTenSP.Location = new System.Drawing.Point(296, 22);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(167, 22);
+            this.txtTenSP.TabIndex = 43;
+            // 
+            // lblTenSP
+            // 
+            this.lblTenSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTenSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.ForeColor = System.Drawing.Color.Blue;
+            this.lblTenSP.Location = new System.Drawing.Point(210, 22);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(80, 22);
+            this.lblTenSP.TabIndex = 31;
+            this.lblTenSP.Text = "Tên SP";
+            this.lblTenSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnThem
             // 
@@ -217,49 +228,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtGia
-            // 
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.ForeColor = System.Drawing.Color.Black;
-            this.txtGia.Location = new System.Drawing.Point(85, 87);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(105, 22);
-            this.txtGia.TabIndex = 52;
-            // 
-            // Gia
-            // 
-            this.Gia.DataPropertyName = "Gia";
-            this.Gia.HeaderText = "Gía";
-            this.Gia.Name = "Gia";
-            this.Gia.Width = 95;
-            // 
-            // NCC
-            // 
-            this.NCC.DataPropertyName = "NCC";
-            this.NCC.HeaderText = "Nhà cung cấp";
-            this.NCC.Name = "NCC";
-            // 
-            // LoaiSP
-            // 
-            this.LoaiSP.DataPropertyName = "LoaiSP";
-            this.LoaiSP.HeaderText = "Loại SP";
-            this.LoaiSP.Name = "LoaiSP";
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên SP";
-            this.TenSP.Name = "TenSP";
-            this.TenSP.Width = 153;
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.Frozen = true;
-            this.MaSP.HeaderText = "Mã SP";
-            this.MaSP.Name = "MaSP";
-            this.MaSP.Width = 80;
-            // 
             // dgvSanPham
             // 
             this.dgvSanPham.AllowUserToAddRows = false;
@@ -269,13 +237,15 @@
             this.TenSP,
             this.LoaiSP,
             this.NCC,
-            this.Gia});
+            this.Gia,
+            this.Photo});
             this.dgvSanPham.Location = new System.Drawing.Point(6, 133);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSanPham.Size = new System.Drawing.Size(674, 181);
             this.dgvSanPham.TabIndex = 72;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
+            this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
             // 
             // btnReset
             // 
@@ -319,6 +289,45 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.Frozen = true;
+            this.MaSP.HeaderText = "Mã SP";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.Width = 80;
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên SP";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.Width = 153;
+            // 
+            // LoaiSP
+            // 
+            this.LoaiSP.DataPropertyName = "LoaiSP";
+            this.LoaiSP.HeaderText = "Loại SP";
+            this.LoaiSP.Name = "LoaiSP";
+            // 
+            // NCC
+            // 
+            this.NCC.DataPropertyName = "NCC";
+            this.NCC.HeaderText = "Nhà cung cấp";
+            this.NCC.Name = "NCC";
+            // 
+            // Gia
+            // 
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Gía";
+            this.Gia.Name = "Gia";
+            this.Gia.Width = 95;
+            // 
+            // Photo
+            // 
+            this.Photo.HeaderText = "Photo";
+            this.Photo.Name = "Photo";
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,14 +368,15 @@
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.DataGridViewImageColumn Photo;
     }
 }

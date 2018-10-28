@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,10 @@ namespace Project1
     {
         QLSanPham qlsp = new QLSanPham();
         QuanLyShopDataContext qly = new QuanLyShopDataContext();
+        MemoryStream ms;
+        
+        private byte[] arrImage;
+
         public frmSanPham()
         {
             InitializeComponent();
@@ -68,20 +73,42 @@ namespace Project1
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
+        }
+
+        private void btnPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog odlgOpenFile = new OpenFileDialog();
+            odlgOpenFile.InitialDirectory = "C:\\";
+            odlgOpenFile.Title = "Open File";
+            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
+            {
+                picHinh.Image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
+                ms = new MemoryStream();
+                picHinh.Image.Save(ms, picHinh.Image.RawFormat);
+                arrImage = ms.GetBuffer();
+                ms.Close();
+            }
+        }
+
+        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             int r = dgvSanPham.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel
             this.txtMaSP.Text =
-            dgvSanPham.Rows[r].Cells[0].Value.ToString();
-            this.txtTenSP.Text =
             dgvSanPham.Rows[r].Cells[1].Value.ToString();
-            this.txtLoaiSP.Text =
+            this.txtTenSP.Text =
             dgvSanPham.Rows[r].Cells[2].Value.ToString();
-            this.txtNCC.Text =
+            this.txtLoaiSP.Text =
             dgvSanPham.Rows[r].Cells[3].Value.ToString();
-            this.txtGia.Text =
+            this.txtNCC.Text =
             dgvSanPham.Rows[r].Cells[4].Value.ToString();
-            //this.picHinh = 
-            
+            this.txtGia.Text =
+            dgvSanPham.Rows[r].Cells[5].Value.ToString();
+            this.picHinh.Image = (System.Drawing.Image)
+            dgvSanPham.Rows[r].Cells[0].FormattedValue;
         }
     }
 }

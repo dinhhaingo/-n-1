@@ -72,8 +72,8 @@ namespace Project1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Form1.ActiveForm.Show();
-            Form.ActiveForm.BringToFront();
+            //Form1.ActiveForm.Show();
+            //Form.ActiveForm.BringToFront();
             this.Close();
         }
     }

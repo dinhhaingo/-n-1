@@ -32,11 +32,10 @@
             this.btnThongTin = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblHuy = new System.Windows.Forms.Label();
+            this.lblNhien = new System.Windows.Forms.Label();
+            this.lblHai = new System.Windows.Forms.Label();
             this.lblThay = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.btnThay = new System.Windows.Forms.Button();
             this.btnShipper = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.BanHang = new System.Windows.Forms.TabPage();
@@ -49,7 +48,6 @@
             this.btnNCC = new System.Windows.Forms.Button();
             this.btnKho1 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btnHaimap = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.pageLogin = new System.Windows.Forms.TabPage();
             this.gb1 = new System.Windows.Forms.GroupBox();
@@ -60,8 +58,10 @@
             this.lblpass = new System.Windows.Forms.Label();
             this.lblacc = new System.Windows.Forms.Label();
             this.pageHelp = new System.Windows.Forms.TabPage();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThay = new System.Windows.Forms.Button();
+            this.btnHai = new System.Windows.Forms.Button();
+            this.btnNhien = new System.Windows.Forms.Button();
+            this.btnTruong = new System.Windows.Forms.Button();
             this.InfoTab = new System.Windows.Forms.TabPage();
             this.btnDoiPass = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -125,65 +125,55 @@
             this.btnKhachHang.UseVisualStyleBackColor = false;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // label4
+            // lblNhien
             // 
-            this.label4.BackColor = System.Drawing.Color.Crimson;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(614, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 18);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Hoàng Văn Nhiên";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNhien.BackColor = System.Drawing.Color.Salmon;
+            this.lblNhien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNhien.ForeColor = System.Drawing.Color.Red;
+            this.lblNhien.Location = new System.Drawing.Point(614, 287);
+            this.lblNhien.Name = "lblNhien";
+            this.lblNhien.Size = new System.Drawing.Size(184, 18);
+            this.lblNhien.TabIndex = 20;
+            this.lblNhien.Text = "Hoàng Văn Nhiên";
+            this.lblNhien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNhien.Click += new System.EventHandler(this.lblNhien_Click);
             // 
-            // lblHuy
+            // lblHai
             // 
-            this.lblHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHuy.ForeColor = System.Drawing.Color.White;
-            this.lblHuy.Location = new System.Drawing.Point(420, 287);
-            this.lblHuy.Name = "lblHuy";
-            this.lblHuy.Size = new System.Drawing.Size(184, 18);
-            this.lblHuy.TabIndex = 19;
-            this.lblHuy.Text = "Ngô Đình Hải";
-            this.lblHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHai.BackColor = System.Drawing.Color.LemonChiffon;
+            this.lblHai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHai.ForeColor = System.Drawing.Color.Red;
+            this.lblHai.Location = new System.Drawing.Point(420, 287);
+            this.lblHai.Name = "lblHai";
+            this.lblHai.Size = new System.Drawing.Size(184, 18);
+            this.lblHai.TabIndex = 19;
+            this.lblHai.Text = "Ngô Đình Hải";
+            this.lblHai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHai.Click += new System.EventHandler(this.lblHai_Click);
             // 
             // lblThay
             // 
             this.lblThay.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblThay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThay.ForeColor = System.Drawing.Color.White;
+            this.lblThay.ForeColor = System.Drawing.Color.Red;
             this.lblThay.Location = new System.Drawing.Point(8, 254);
             this.lblThay.Name = "lblThay";
             this.lblThay.Size = new System.Drawing.Size(303, 52);
             this.lblThay.TabIndex = 17;
             this.lblThay.Text = "GVHD: Trần Công Tú";
             this.lblThay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblThay.Click += new System.EventHandler(this.lblThay_Click);
             // 
             // lblTime
             // 
             this.lblTime.BackColor = System.Drawing.Color.Gray;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.ForeColor = System.Drawing.Color.Red;
             this.lblTime.Location = new System.Drawing.Point(319, 131);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(92, 175);
             this.lblTime.TabIndex = 16;
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnThay
-            // 
-            this.btnThay.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnThay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThay.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThay.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnThay.Location = new System.Drawing.Point(8, 8);
-            this.btnThay.Name = "btnThay";
-            this.btnThay.Size = new System.Drawing.Size(303, 298);
-            this.btnThay.TabIndex = 15;
-            this.btnThay.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnThay.UseVisualStyleBackColor = false;
             // 
             // btnShipper
             // 
@@ -278,7 +268,7 @@
             this.lblUser.ForeColor = System.Drawing.Color.Blue;
             this.lblUser.Location = new System.Drawing.Point(648, 10);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(183, 26);
+            this.lblUser.Size = new System.Drawing.Size(300, 26);
             this.lblUser.TabIndex = 3;
             this.lblUser.Text = "---oOo---";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -329,15 +319,9 @@
             this.btnKho1.UseVisualStyleBackColor = false;
             this.btnKho1.Click += new System.EventHandler(this.btnKho1_Click);
             // 
-            // btnHaimap
+            // timer2
             // 
-            this.btnHaimap.BackColor = System.Drawing.Color.Crimson;
-            this.btnHaimap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHaimap.Location = new System.Drawing.Point(613, 131);
-            this.btnHaimap.Name = "btnHaimap";
-            this.btnHaimap.Size = new System.Drawing.Size(186, 175);
-            this.btnHaimap.TabIndex = 12;
-            this.btnHaimap.UseVisualStyleBackColor = false;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // tabControl2
             // 
@@ -446,14 +430,14 @@
             // pageHelp
             // 
             this.pageHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.pageHelp.Controls.Add(this.label4);
-            this.pageHelp.Controls.Add(this.lblHuy);
+            this.pageHelp.Controls.Add(this.lblNhien);
+            this.pageHelp.Controls.Add(this.lblHai);
             this.pageHelp.Controls.Add(this.lblThay);
             this.pageHelp.Controls.Add(this.lblTime);
             this.pageHelp.Controls.Add(this.btnThay);
-            this.pageHelp.Controls.Add(this.btnHuy);
-            this.pageHelp.Controls.Add(this.btnHaimap);
-            this.pageHelp.Controls.Add(this.button1);
+            this.pageHelp.Controls.Add(this.btnHai);
+            this.pageHelp.Controls.Add(this.btnNhien);
+            this.pageHelp.Controls.Add(this.btnTruong);
             this.pageHelp.Location = new System.Drawing.Point(4, 22);
             this.pageHelp.Name = "pageHelp";
             this.pageHelp.Padding = new System.Windows.Forms.Padding(3);
@@ -461,25 +445,56 @@
             this.pageHelp.TabIndex = 0;
             this.pageHelp.Text = "Hỗ Trợ ";
             // 
-            // btnHuy
+            // btnThay
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Location = new System.Drawing.Point(419, 131);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(186, 175);
-            this.btnHuy.TabIndex = 13;
-            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnThay.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnThay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThay.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThay.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnThay.Image = global::Project1.Properties.Resources.Teacher_male_icon;
+            this.btnThay.Location = new System.Drawing.Point(8, 8);
+            this.btnThay.Name = "btnThay";
+            this.btnThay.Size = new System.Drawing.Size(303, 298);
+            this.btnThay.TabIndex = 15;
+            this.btnThay.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnThay.UseVisualStyleBackColor = false;
+            this.btnThay.Click += new System.EventHandler(this.btnThay_Click);
             // 
-            // button1
+            // btnHai
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(319, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(480, 115);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHai.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnHai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHai.Image = global::Project1.Properties.Resources.Student_Male_icon;
+            this.btnHai.Location = new System.Drawing.Point(419, 131);
+            this.btnHai.Name = "btnHai";
+            this.btnHai.Size = new System.Drawing.Size(186, 175);
+            this.btnHai.TabIndex = 13;
+            this.btnHai.UseVisualStyleBackColor = false;
+            this.btnHai.Click += new System.EventHandler(this.btnHai_Click);
+            // 
+            // btnNhien
+            // 
+            this.btnNhien.BackColor = System.Drawing.Color.Salmon;
+            this.btnNhien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhien.Image = global::Project1.Properties.Resources.Users_Student_2_icon;
+            this.btnNhien.Location = new System.Drawing.Point(613, 131);
+            this.btnNhien.Name = "btnNhien";
+            this.btnNhien.Size = new System.Drawing.Size(186, 175);
+            this.btnNhien.TabIndex = 12;
+            this.btnNhien.UseVisualStyleBackColor = false;
+            this.btnNhien.Click += new System.EventHandler(this.btnNhien_Click);
+            // 
+            // btnTruong
+            // 
+            this.btnTruong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTruong.ForeColor = System.Drawing.Color.White;
+            this.btnTruong.Image = global::Project1.Properties.Resources.th;
+            this.btnTruong.Location = new System.Drawing.Point(319, 8);
+            this.btnTruong.Name = "btnTruong";
+            this.btnTruong.Size = new System.Drawing.Size(480, 115);
+            this.btnTruong.TabIndex = 11;
+            this.btnTruong.UseVisualStyleBackColor = true;
+            this.btnTruong.Click += new System.EventHandler(this.btnTruong_Click);
             // 
             // InfoTab
             // 
@@ -500,13 +515,14 @@
             this.btnDoiPass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDoiPass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiPass.ForeColor = System.Drawing.Color.Blue;
-            this.btnDoiPass.Location = new System.Drawing.Point(188, 0);
+            this.btnDoiPass.Location = new System.Drawing.Point(94, 0);
             this.btnDoiPass.Name = "btnDoiPass";
             this.btnDoiPass.Size = new System.Drawing.Size(94, 86);
             this.btnDoiPass.TabIndex = 6;
             this.btnDoiPass.Text = "Đổi Mật Khẩu";
             this.btnDoiPass.UseCompatibleTextRendering = true;
             this.btnDoiPass.UseVisualStyleBackColor = false;
+            this.btnDoiPass.Click += new System.EventHandler(this.btnDoiPass_Click);
             // 
             // btnLogout
             // 
@@ -514,7 +530,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Blue;
-            this.btnLogout.Location = new System.Drawing.Point(94, 0);
+            this.btnLogout.Location = new System.Drawing.Point(188, 0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(94, 86);
             this.btnLogout.TabIndex = 5;
@@ -522,6 +538,10 @@
             this.btnLogout.UseCompatibleTextRendering = true;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblChao
             // 
@@ -598,8 +618,8 @@
         private System.Windows.Forms.Button btnThongTin;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblHuy;
+        private System.Windows.Forms.Label lblNhien;
+        private System.Windows.Forms.Label lblHai;
         private System.Windows.Forms.Label lblThay;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnThay;
@@ -614,7 +634,7 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.TabPage QlyRapTab;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button btnHaimap;
+        private System.Windows.Forms.Button btnNhien;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage pageLogin;
         private System.Windows.Forms.GroupBox gb1;
@@ -625,13 +645,13 @@
         private System.Windows.Forms.Label lblpass;
         private System.Windows.Forms.Label lblacc;
         private System.Windows.Forms.TabPage pageHelp;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTruong;
         private System.Windows.Forms.TabPage InfoTab;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblChao;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button btnKho1;
-        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnHai;
         private System.Windows.Forms.Button btnDoiPass;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnNCC;

@@ -48,15 +48,17 @@ namespace Project1
             int r = dgvBanHang.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel
             this.lblMaSP1.Text =
-            dgvBanHang.Rows[r].Cells[0].Value.ToString();
-            this.lblTenSP1.Text =
             dgvBanHang.Rows[r].Cells[1].Value.ToString();
-            this.lblLoaiSP1.Text =
+            this.lblTenSP1.Text =
             dgvBanHang.Rows[r].Cells[2].Value.ToString();
-            this.lblNCC1.Text =
+            this.lblLoaiSP1.Text =
             dgvBanHang.Rows[r].Cells[3].Value.ToString();
-            this.lblGia1.Text =
+            this.lblNCC1.Text =
             dgvBanHang.Rows[r].Cells[4].Value.ToString();
+            this.lblGia1.Text =
+            dgvBanHang.Rows[r].Cells[5].Value.ToString();
+            this.picHinh.Image= (System.Drawing.Image)
+            dgvBanHang.Rows[r].Cells[0].FormattedValue;
         }
 
         private void cbSize_MouseClick(object sender, MouseEventArgs e)
@@ -86,9 +88,9 @@ namespace Project1
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            Form1.ActiveForm.Hide ();
+            //Form1.ActiveForm.Hide ();
             frmGioHang frm = new frmGioHang();
-            frm.Show();
+            frm.ShowDialog();
             
         }
     }

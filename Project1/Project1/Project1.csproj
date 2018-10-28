@@ -135,6 +135,9 @@
     <EmbeddedResource Include="frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiPass.resx">
+      <DependentUpon>frmDoiPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGioHang.resx">
       <DependentUpon>frmGioHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +225,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button-Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Keychain Access_37052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModernXP-47-Printer-Save-Ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModernXP-47-Printer-Save-Ok-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teacher-male-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student-Male-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-Student-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

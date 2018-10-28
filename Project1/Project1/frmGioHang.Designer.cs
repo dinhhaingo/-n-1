@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvGio = new System.Windows.Forms.DataGridView();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTimKiem = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
@@ -41,11 +46,6 @@
             this.lblCH1 = new System.Windows.Forms.Label();
             this.lblSP1 = new System.Windows.Forms.Label();
             this.lblKH = new System.Windows.Forms.Label();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSL = new System.Windows.Forms.Label();
             this.cbSize = new System.Windows.Forms.ComboBox();
             this.cbSL = new System.Windows.Forms.TextBox();
@@ -71,6 +71,42 @@
             this.dgvGio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGio.Size = new System.Drawing.Size(401, 225);
             this.dgvGio.TabIndex = 73;
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKH";
+            this.MaKH.Frozen = true;
+            this.MaKH.HeaderText = "Mã KH";
+            this.MaKH.Name = "MaKH";
+            this.MaKH.Width = 80;
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã SP";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.Width = 80;
+            // 
+            // MaCH
+            // 
+            this.MaCH.DataPropertyName = "MaCH";
+            this.MaCH.HeaderText = "Mã CH";
+            this.MaCH.Name = "MaCH";
+            this.MaCH.Width = 80;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "Size";
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.Width = 50;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 50;
             // 
             // lblTimKiem
             // 
@@ -216,42 +252,6 @@
             this.lblKH.TabIndex = 81;
             this.lblKH.Text = "Mã Khách Hàng:";
             // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "MaKH";
-            this.MaKH.Frozen = true;
-            this.MaKH.HeaderText = "Mã KH";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.Width = 80;
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Mã SP";
-            this.MaSP.Name = "MaSP";
-            this.MaSP.Width = 80;
-            // 
-            // MaCH
-            // 
-            this.MaCH.DataPropertyName = "MaCH";
-            this.MaCH.HeaderText = "Mã CH";
-            this.MaCH.Name = "MaCH";
-            this.MaCH.Width = 80;
-            // 
-            // Size
-            // 
-            this.Size.DataPropertyName = "Size";
-            this.Size.HeaderText = "Size";
-            this.Size.Name = "Size";
-            this.Size.Width = 50;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 50;
-            // 
             // lblSL
             // 
             this.lblSL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -338,6 +338,7 @@
             this.Controls.Add(this.dgvGio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGioHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGioHang";
             this.Load += new System.EventHandler(this.frmGioHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGio)).EndInit();

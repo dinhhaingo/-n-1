@@ -56,6 +56,7 @@
             this.LoaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.gbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBanHang)).BeginInit();
@@ -304,7 +305,8 @@
             this.TenSP,
             this.LoaiSP,
             this.NCC,
-            this.Gia});
+            this.Gia,
+            this.Photo});
             this.dgvBanHang.Location = new System.Drawing.Point(6, 12);
             this.dgvBanHang.Name = "dgvBanHang";
             this.dgvBanHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -345,6 +347,11 @@
             this.Gia.HeaderText = "Giá";
             this.Gia.Name = "Gia";
             // 
+            // Photo
+            // 
+            this.Photo.HeaderText = "Photo";
+            this.Photo.Name = "Photo";
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,11 +387,6 @@
         private System.Windows.Forms.Label lblGia;
         private System.Windows.Forms.Label lblSize;
         private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
         private System.Windows.Forms.Label lblSoLuong1;
         private System.Windows.Forms.Label lblGia1;
         private System.Windows.Forms.PictureBox picHinh;
@@ -395,5 +397,11 @@
         private System.Windows.Forms.TextBox txtKH;
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Label lblKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.DataGridViewImageColumn Photo;
     }
 }

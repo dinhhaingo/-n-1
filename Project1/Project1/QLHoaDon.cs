@@ -11,6 +11,7 @@ namespace Project1
 {
     class QLHoaDon
     {
+        
         QuanLyShopDataContext qly = new QuanLyShopDataContext();
         public DataTable getMaHD()
         {
