@@ -12,17 +12,21 @@ namespace Project1
     class QLShipper
     {
         QuanLyShopDataContext qly = new QuanLyShopDataContext();
-        public DataTable getMaShipper()
+        public string getMaShipper(string nql)
         {
             var ship = from p in qly.Shippers
-                       select new { p.MaShipper };
+                       join p1 in qly.NhanViens on p.CuaHang equals p1.CuaHang
+                       where p1.MaNV == nql
+                       select p.MaShipper ;
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("MaShipper"));
             foreach (var x in ship.ToList())
             {
-                dt.LoadDataRow(new object[] { x.MaShipper }, true);
+                dt.LoadDataRow(new object[] { x }, true);
             }
-            return dt;
+            Random ran = new Random();
+            int r = ran.Next(0, dt.Rows.Count);
+            return dt.Rows[r][6].ToString();
         }
         public DataTable getShipper(string MaNQL)
         {

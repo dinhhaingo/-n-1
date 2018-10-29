@@ -15,6 +15,7 @@ namespace Project1
         
         QLNhanVien qlnv = new QLNhanVien();
         BanHang bh = new BanHang();
+        
         QuanLyShopDataContext qly = new QuanLyShopDataContext();
         //DataTable tt;
         public frmBanHang()

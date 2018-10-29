@@ -54,7 +54,7 @@ namespace Project1
                 btnNhanVien.Enabled = true;
                 btnKhachHang.Enabled = true;
                 btnSanPham.Enabled = true;
-                btnThongTin.Enabled = true;
+                //btnThongTin.Enabled = true;
                 btnLogout.Enabled = true;
                 btnDoiPass.Enabled = true;
                 btnKho1.Enabled = true;
@@ -83,7 +83,7 @@ namespace Project1
             btnNhanVien.Enabled = false;
             btnKhachHang.Enabled = false;
             btnSanPham.Enabled = false;
-            btnThongTin.Enabled = false;
+            //btnThongTin.Enabled = false;
             btnBanHang.Enabled = false;
             btnHoaDon.Enabled = false;
             lblUser.Visible = false;
@@ -122,7 +122,7 @@ namespace Project1
             btnSanPham.Enabled = false;
             btnShipper.Enabled = false;
             btnKho1.Enabled = false;
-            btnThongTin.Enabled = false;
+            //btnThongTin.Enabled = false;
             btnDoiPass.Enabled = false;
             btnKho1.Enabled = false;
             btnNCC.Enabled = false;

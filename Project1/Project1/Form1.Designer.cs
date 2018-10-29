@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnThongTin = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.lblNhien = new System.Windows.Forms.Label();
@@ -80,20 +79,6 @@
             this.InfoTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnThongTin
-            // 
-            this.btnThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongTin.ForeColor = System.Drawing.Color.Blue;
-            this.btnThongTin.Location = new System.Drawing.Point(0, 0);
-            this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Size = new System.Drawing.Size(94, 86);
-            this.btnThongTin.TabIndex = 4;
-            this.btnThongTin.Text = "Xem Thông Tin";
-            this.btnThongTin.UseCompatibleTextRendering = true;
-            this.btnThongTin.UseVisualStyleBackColor = false;
             // 
             // btnNhanVien
             // 
@@ -501,13 +486,12 @@
             this.InfoTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.InfoTab.Controls.Add(this.btnDoiPass);
             this.InfoTab.Controls.Add(this.btnLogout);
-            this.InfoTab.Controls.Add(this.btnThongTin);
             this.InfoTab.Location = new System.Drawing.Point(4, 22);
             this.InfoTab.Name = "InfoTab";
             this.InfoTab.Padding = new System.Windows.Forms.Padding(3);
             this.InfoTab.Size = new System.Drawing.Size(806, 86);
             this.InfoTab.TabIndex = 0;
-            this.InfoTab.Text = "Thông tin cá nhân";
+            this.InfoTab.Text = "Tài Khoản";
             // 
             // btnDoiPass
             // 
@@ -515,7 +499,7 @@
             this.btnDoiPass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDoiPass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiPass.ForeColor = System.Drawing.Color.Blue;
-            this.btnDoiPass.Location = new System.Drawing.Point(94, 0);
+            this.btnDoiPass.Location = new System.Drawing.Point(0, 0);
             this.btnDoiPass.Name = "btnDoiPass";
             this.btnDoiPass.Size = new System.Drawing.Size(94, 86);
             this.btnDoiPass.TabIndex = 6;
@@ -530,7 +514,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Blue;
-            this.btnLogout.Location = new System.Drawing.Point(188, 0);
+            this.btnLogout.Location = new System.Drawing.Point(94, 0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(94, 86);
             this.btnLogout.TabIndex = 5;
@@ -614,8 +598,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnThongTin;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Label lblNhien;

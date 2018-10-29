@@ -108,5 +108,26 @@ namespace Project1
                 }
             }
         }
+        string mahd;
+        
+        public string ranMaHD()
+        {
+            var hd = from p in qly.HoaDons
+                 select new { p.MaHD };
+            DataTable dt = new DataTable();
+            dt.Columns.Add(new DataColumn("MaHD"));
+            int f;
+            do
+            {
+                f = 0;
+                Random ran = new Random();
+                mahd = "HD" + ran.Next(1, 99999999).ToString();
+                foreach (var x in hd.ToList())
+                {
+                    if(mahd.Trim().Equals(x)) f=1;
+                }
+            } while (f==1);
+            return mahd;
+        }
     }
 }
