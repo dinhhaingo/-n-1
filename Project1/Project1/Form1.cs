@@ -34,6 +34,7 @@ namespace Project1
         }
         string tk;
         string mk;
+        string text;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataTable log = me.Login(txtUser.Text, txtPass.Text);
@@ -41,7 +42,8 @@ namespace Project1
             {
                 tk = log.Rows[0][0].ToString().Trim();
                 mk = log.Rows[0][5].ToString().Trim();
-                lblUser.Text = log.Rows[0][3].ToString().Trim()+": "+log.Rows[0][2].ToString().Trim();               
+                lblUser.Text = log.Rows[0][3].ToString().Trim()+": "+log.Rows[0][2].ToString().Trim();
+                text = log.Rows[0][1].ToString().Trim();
                 MessageBox.Show("Đăng nhập thành công", "Login",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //me.LoginSuccess(txtUser.Text);
@@ -96,7 +98,7 @@ namespace Project1
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             frmNhanVien frm = new frmNhanVien();
-            frm.Message = lblUser.Text;
+            frm.Message = text;
             frm.TopLevel = false;
             string title = "QL Nhan Vien";
             TabPage pageQLNhanVien = new TabPage(title);
@@ -145,7 +147,7 @@ namespace Project1
         private void btnShipper_Click(object sender, EventArgs e)
         {
             frmShipper frm = new frmShipper();
-            frm.Message = lblUser.Text;
+            frm.Message = text;
             frm.TopLevel = false;
             string title = "QL Shipper";
             TabPage pageQLShipper = new TabPage(title);
@@ -185,7 +187,7 @@ namespace Project1
         private void btnKho1_Click(object sender, EventArgs e)
         {
             frmKho frm = new frmKho();
-            frm.Message = lblUser.Text;
+            frm.Message = text;
             frm.TopLevel = false;
             string title = "QL Kho";
             TabPage pageQLKho = new TabPage(title);
@@ -199,7 +201,7 @@ namespace Project1
         private void btnBanHang_Click(object sender, EventArgs e)
         {
             frmBanHang frm = new frmBanHang();
-            frm.Message = lblUser.Text;
+            frm.Message = text;
             frm.TopLevel = false;
             string title = "Bán Hàng";
             TabPage pageBanHang = new TabPage(title);
@@ -262,12 +264,12 @@ namespace Project1
 
         private void btnNhien_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://www.facebook.com/thien.nhien.1671");
         }
 
         private void lblNhien_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://www.facebook.com/thien.nhien.1671");
         }
 
         private void btnTruong_Click(object sender, EventArgs e)

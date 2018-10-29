@@ -227,5 +227,21 @@ namespace Project1
             }
             return soluong;
         }
+        public DataTable getCH(string masp,string size, int sl)
+        {
+            var ch = from p in qly.Khos
+                     join p1 in qly.HTCuaHangs on p.MaCH equals p1.MaCH
+                     where p.MaSP == masp
+                     where p.Size == size
+                     where p.SoLuong == sl
+                     select p1.TenCH;
+            DataTable dt = new DataTable();
+            dt.Columns.Add(new DataColumn("TenCH"));
+            foreach (var s in ch.ToList())
+            {
+                dt.LoadDataRow(new object[] { s }, true);
+            }
+            return dt;
+        }
     }
 }

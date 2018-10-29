@@ -71,13 +71,18 @@ namespace Project1
         {
             if (txtKH.Text.Trim().Equals("") || txtSL.Text.Trim().Equals(""))
                 MessageBox.Show("Không để trống mục khách hàng và số lượng!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
             else
             {
                 try
                 {
                     sl = Convert.ToInt32(txtSL);
                     kh = txtKH.Text.Trim();
-                    bh.Them(kh, lblMaSP1.Text, bh.getMaCH(_message), cbSize.Text, sl);
+                    if (sl > Convert.ToInt32(lblSoLuong1))
+                    {
+                        MessageBox.Show("Số lượng trong kho không đủ");
+                    }
+                    else bh.Them(kh, lblMaSP1.Text, bh.getMaCH(_message), cbSize.Text, sl);
                 }
                 catch (Exception)
                 {
