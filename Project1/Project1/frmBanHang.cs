@@ -64,6 +64,7 @@ namespace Project1
 
         private void cbSize_MouseClick(object sender, MouseEventArgs e)
         {
+           // MessageBox.Show(bh.SoLuong(lblMaSP1.Text, _message, cbSize.Text).ToString());
             lblSoLuong1.Text = bh.SoLuong(lblMaSP1.Text, _message, cbSize.Text).ToString();
         }
         int sl;
@@ -99,5 +100,17 @@ namespace Project1
             frm.ShowDialog();
             
         }
+
+        private void cbSize_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show(bh.SoLuong(lblMaSP1.Text, _message, cbSize.Text).ToString());
+            lblSoLuong1.Text = bh.SoLuong(lblMaSP1.Text, _message, cbSize.Text).ToString();
+        }
+
+        //private void cbSize_TextChanged(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show(bh.SoLuong(lblMaSP1.Text, _message, cbSize.Text).ToString());
+        //    lblSoLuong1.Text = bh.SoLuong(lblMaSP1.Text, _message, cbSize.Text).ToString();
+        //}
     }
 }

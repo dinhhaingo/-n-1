@@ -167,7 +167,9 @@
             this.cbSize.Name = "cbSize";
             this.cbSize.Size = new System.Drawing.Size(121, 27);
             this.cbSize.TabIndex = 59;
-            this.cbSize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbSize_MouseClick);
+            //this.cbSize.TextChanged += new System.EventHandler(this.cbSize_TextChanged);
+           this.cbSize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbSize_MouseClick);
+            this.cbSize.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbSize_MouseDoubleClick);
             // 
             // lblSoLuong1
             // 

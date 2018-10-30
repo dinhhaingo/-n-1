@@ -216,7 +216,7 @@ namespace Project1
         {
             
             var sl = from p in qly.Khos
-                     join p1 in qly.NhanViens on p.MaCH equals p1.CuaHang
+                      join p1 in qly.NhanViens on p.MaCH equals p1.CuaHang
                      where p.MaSP == masp
                      where p1.MaNV == manql
                      where p.Size == size
