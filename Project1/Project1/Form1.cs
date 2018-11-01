@@ -50,22 +50,38 @@ namespace Project1
                 tenshop = me.TenShopget(txtUser.Text).Trim();
                 lblChao.Text = " Chào mừng đến với " + tenshop + " ";
                 timer2.Start();
-                btnShipper.Enabled = true;
-                btnNhanVien.Enabled = true;
-                btnKhachHang.Enabled = true;
-                btnSanPham.Enabled = true;
-                //btnThongTin.Enabled = true;
-                btnLogout.Enabled = true;
-                btnDoiPass.Enabled = true;
-                btnKho1.Enabled = true;
-                btnNCC.Enabled = true;
-                btnBanHang.Enabled = true;
-                btnHoaDon.Enabled = true;
-                tabControl1.Visible = true;
-                lblChao.Visible = true;
-                lblUser.Visible = true;
-                btnLogout.Visible = true;
-                tabControl2.TabPages.Remove(pageLogin);
+                if (log.Rows[0][3].ToString().Trim().Equals("Thu Ngân"))
+                {
+                    btnKhachHang.Enabled = true;
+                    btnBanHang.Enabled = true;
+                    btnHoaDon.Enabled = true;
+                    btnKho1.Enabled = true;
+                    tabControl1.Visible = true;
+                    lblChao.Visible = true;
+                    lblUser.Visible = true;
+                    btnLogout.Visible = true;
+                    btnDoiPass.Enabled = true;
+                    tabControl2.TabPages.Remove(pageLogin);
+                }
+                else
+                {
+                    btnShipper.Enabled = true;
+                    btnNhanVien.Enabled = true;
+                    btnKhachHang.Enabled = true;
+                    btnSanPham.Enabled = true;
+                    //btnThongTin.Enabled = true;
+                    btnLogout.Enabled = true;
+                    btnDoiPass.Enabled = true;
+                    btnKho1.Enabled = true;
+                    btnNCC.Enabled = true;
+                    btnBanHang.Enabled = true;
+                    btnHoaDon.Enabled = true;
+                    tabControl1.Visible = true;
+                    lblChao.Visible = true;
+                    lblUser.Visible = true;
+                    btnLogout.Visible = true;
+                    tabControl2.TabPages.Remove(pageLogin);
+                }
             }
             catch
             {

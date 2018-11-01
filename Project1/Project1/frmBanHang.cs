@@ -69,6 +69,7 @@ namespace Project1
         }
         int sl;
         string kh;
+        string message;
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (txtKH.Text.Trim().Equals("") || txtSL.Text.Trim().Equals(""))
@@ -76,20 +77,34 @@ namespace Project1
             
             else
             {
-                try
-                {
-                    sl = Convert.ToInt32(txtSL);
+                //try
+                //{
+                    sl = Convert.ToInt32(txtSL.Text);
                     kh = txtKH.Text.Trim();
-                    if (sl > Convert.ToInt32(lblSoLuong1))
+                    if (sl > Convert.ToInt32(lblSoLuong1.Text))
                     {
-                        MessageBox.Show("Số lượng trong kho không đủ");
+                        message = bh.getCH1(lblMaSP1.Text, cbSize.Text, Convert.ToInt32(txtSL.Text));
+                        //var ch = from p in qly.Khos
+                        //         join p1 in qly.HTCuaHangs on p.MaCH equals p1.MaCH
+                        //         where p.MaSP == lblMaSP1.Text
+                        //         where p.Size == cbSize.Text
+                        //         where p.SoLuong == Convert.ToInt32(txtSL.Text)
+                        //         select p1.TenCH;
+                        //foreach (var s in ch.ToList())
+                        //{
+                        //    message = s+",";
+                        ////MessageBox.Show(s.ToString());
+                        
+                        //}
+                        //MessageBox.Show(message);
+                        MessageBox.Show("Số lượng trong kho không đủ, bạn nhập lại số lượng cần thêm hoặc đến các cửa hàng khác trong hệ thống đang còn sản phẩm: "+message, "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
                     else bh.Them(kh, lblMaSP1.Text, bh.getMaCH(_message), cbSize.Text, sl);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Dữ liệu nhập vào sai, mời nhập lại !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //}
+                //catch (Exception)
+                //{
+                //    MessageBox.Show("Dữ liệu nhập vào sai, mời nhập lại !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }
         }
 
